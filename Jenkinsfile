@@ -8,20 +8,20 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    docker.build("flask_crud_sqlite_app:latest")
-                }
-            }
-        }
+        // stage('Build Docker Image') {
+        //     steps {
+        //         script {
+        //             docker.build("flask_crud_sqlite_app:latest")
+        //         }
+        //     }
+        // }
 
-        stage('Run Container') {
-            steps {
-                script {
-                    docker.image("flask_crud_sqlite_app:latest").run('-p 5000:5000')
-                }
-            }
-        }
+        // stage('Run Container') {
+        //     steps {
+        //         script {
+        //             docker.image("flask_crud_sqlite_app:latest").run('-p 5000:5000')
+        //         }
+        //     }
+        // }
     }
 }
